@@ -404,8 +404,8 @@
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ban #0" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-gK-wMB">
-                                            <rect key="frame" x="16" y="59" width="74" height="30"/>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ban #0" adjustsFontForContentSizeCategory="YES" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="bMs-gK-wMB">
+                                            <rect key="frame" x="16" y="59" width="222" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -416,6 +416,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="OXJ-i7-eoL" secondAttribute="trailing" constant="8" id="CzA-ca-Cde"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="WFj-zn-wup" secondAttribute="bottom" constant="8" id="Lhx-5y-0YG"/>
                                         <constraint firstItem="OXJ-i7-eoL" firstAttribute="top" secondItem="npv-2m-ux9" secondAttribute="topMargin" constant="8" id="NYd-wA-gL8"/>
+                                        <constraint firstItem="OXJ-i7-eoL" firstAttribute="leading" secondItem="bMs-gK-wMB" secondAttribute="trailing" constant="8" id="Q7w-7n-aNP"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="WFj-zn-wup" secondAttribute="trailing" constant="8" id="TrA-Eb-uP4"/>
                                         <constraint firstItem="WFj-zn-wup" firstAttribute="leading" secondItem="6vT-E3-J9V" secondAttribute="trailing" constant="8" id="UfC-mI-cil"/>
                                         <constraint firstItem="WFj-zn-wup" firstAttribute="centerY" secondItem="6vT-E3-J9V" secondAttribute="centerY" id="aGc-P8-2PG"/>

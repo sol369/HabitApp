@@ -121,6 +121,7 @@ class BanTableViewCell: UITableViewCell {
         if sender.text == nil || sender.text!.isEmpty {
             self.submitCountLabel.text = String(submitCount)
             self.resistCountLabel.text = String(resistCount)
+            self.banLabel.text = ban?.name ?? "Ban #" + "\(row + 1)"
             return
         }
         if sender === self.submitCountLabel {
