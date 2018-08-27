@@ -8,9 +8,14 @@
 
 import UIKit
 import CoreData
+import Material
+import PopupDialog
+
 class BansTableViewController: UITableViewController {
     
     //MARK: - Properties
+    
+    @IBOutlet weak var resetButton: RaisedButton!
     
     private let persistentContainer = NSPersistentContainer(name: "Bans")
     
@@ -32,6 +37,9 @@ class BansTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //UI
+        resetButton.backgroundColor = UIColor(red: 70/255, green: 116/255, blue: 193/255, alpha: 1.0)
         
         //Add touch dismissal
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -120,6 +128,19 @@ class BansTableViewController: UITableViewController {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+    @IBAction func resetAction(_ sender: Any) {
+        let popup = PopupDialog(title: "Reset Bans?", message: "Are you sure? This action can't be undone.")
+        popup.transitionStyle = .zoomIn
+        popup.buttonAlignment = .horizontal
+        let okButton = DestructiveButton(title: "Reset") {
+            self.reset()
+        }
+        let cancelButton = CancelButton(title: "Cancel") {
+            //cancel
+        }
+        popup.addButtons([cancelButton, okButton])
+        self.present(popup, animated: true, completion: nil)
     }
     
     //MARK: - Notifications

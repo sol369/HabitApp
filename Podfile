@@ -7,7 +7,8 @@ target 'HabitApp' do
 
   # Pods for HabitApp
   pod 'Material'
-	
+  pod 'PopupDialog', '~> 0.5'
+
   target 'HabitAppTests' do
     inherit! :search_paths
     # Pods for testing

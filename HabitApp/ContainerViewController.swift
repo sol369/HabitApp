@@ -16,7 +16,6 @@ class ContainerViewController: UIViewController {
     
     @IBOutlet weak var helpButton: UIBarButtonItem!
     
-    @IBOutlet weak var resetButton: RaisedButton!
     
     private var tableVC: BansTableViewController?
     
@@ -51,12 +50,6 @@ class ContainerViewController: UIViewController {
         }
     }
     
-    @IBAction func reset(_ sender: Any) {
-        if let tableVC = self.tableVC {
-            tableVC.reset()
-        }
-    }
-    
 }
 
 //MARK: - UI
@@ -65,7 +58,6 @@ extension ContainerViewController {
     
     private func prepareUI() {
         addButton.image = Icon.addCircleOutline
-        resetButton.backgroundColor = UIColor(red: 70/255, green: 116/255, blue: 193/255, alpha: 1.0)
     }
     
 }
